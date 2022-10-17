@@ -1,0 +1,11 @@
+{
+  "name": "Tools Box",
+  "short_name": "Tools Box",
+  "theme_color": "#22d3ee",
+  "background_color": "#000000",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "default_locale": "pt-BR"
+}
