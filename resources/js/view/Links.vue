@@ -28,13 +28,12 @@
 
             </div>
 
-            <button type="submit" v-show="!fullForm" class="inline-flex items-center ml-2 text-sm font-medium text-white bg-cyan-700 border rounded border-cyan-700 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-blue-800">Encurtar URL</button>
+            <button type="submit" v-show="!fullForm" class="p-1 inline-flex items-center ml-2 text-sm font-medium text-white bg-cyan-700 border rounded border-cyan-700 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-blue-800">Encurtar URL</button>
 
             <button type="button" v-show="fullForm" @click="copy()"
-                class="inline-flex items-center ml-2 text-sm font-medium text-white rounded border" :class="{
+                class="p-1 inline-flex items-center ml-2 text-sm font-medium text-white rounded border" :class="{
                   'bg-slate-700 border-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800': styleCopy,
-          
-                  'inline-flex items-center ml-2 text-sm font-medium text-white bg-cyan-700 border rounded border-cyan-700 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-blue-800': !styleCopy,
+                  'p-1 inline-flex items-center ml-2 text-sm font-medium text-white bg-cyan-700 border rounded border-cyan-700 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-blue-800': !styleCopy,
                 }">Copiar URL</button>
 
         </form>
@@ -84,6 +83,7 @@ export default {
             this.$refs.myinput.focus();
             document.execCommand('copy');
 
+            alert('Link Copiado');
             this.styleCopy = true;
             setTimeout(function () { this.styleCopy = false; }, 1500);
         }
